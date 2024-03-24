@@ -48,7 +48,6 @@ body {
 }
 
 #left {
-    background-image: url(./images/starboy.jpg);
     background-size: cover;
     background-position: top;
     height: 25rem;

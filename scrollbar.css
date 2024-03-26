@@ -1,0 +1,20 @@
+/* Webkit (Chrome, Safari) */
+/* These rules will only apply to webkit-based browsers */
+
+
+#right::-webkit-scrollbar {
+    width: 6px; /* Width of the scrollbar */
+}
+
+#right::-webkit-scrollbar-track {
+    background: #3c3c44; /* Track color */
+}
+
+#right::-webkit-scrollbar-thumb {
+    background: #b2b0b0; /* Thumb color */ 
+}
+
+#right::-webkit-scrollbar-thumb:hover {
+    background: #b2b0b0; /* Thumb color on hover */
+}
+

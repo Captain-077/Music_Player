@@ -2,11 +2,13 @@
 
 
 var arr = [
-    { songName: "Starboy", url: "./songs/starboy.mp3", img: "./images/starboy.jpg" },
-    { songName: "Chitta", url: "./songs/Chitta.mp3", img: "./images/chitta.jpg" },
-    { songName: "Dhundhala", url: "./songs/Dhundhala.mp3", img: "./images/dhundla.webp" },
-    { songName: "Psycho", url: "./songs/psycho.mp3", img: "./images/psycho.webp" },
-    { songName: "Faasla ft.Hasan Raheem", url: "./songs/Faasla-ft-Hasan Raheem.mp3", img: "./images/Faasla.jpg" }
+    { songName: "Starboy", artist:"The Weeknd",url: "./songs/starboy.mp3", img: "./images/starboy.jpg",time:"2:20" },
+    { songName: "Chitta", artist:"Prabh Deep",url: "./songs/Chitta.mp3", img: "./images/chitta.jpg",time:"2:00" },
+    { songName: "Dhundhala",artist:"Dropped Out, Talwiinder, and Yashraj", url: "./songs/Dhundhala.mp3", img: "./images/dhundla.webp",time:"1:48" },
+    { songName: "Psycho", artist:"Post Malone",url: "./songs/psycho.mp3", img: "./images/psycho.webp",time:"3:56" },
+    { songName: "Faasla ft.Hasan Raheem", artist:"Shamoon Ismail",url: "./songs/Faasla-ft-Hasan Raheem.mp3", img: "./images/Faasla.jpg",time:"1:07" },
+    { songName: "Fire for You", artist:"Cannons",url: "./songs/Fire-for-You.mp3", img: "./images/fire-for-you.jpg",time:"2:04" },
+    { songName: "Unsaid", artist:"4ever Falling & Auram",url: "./songs/unsaid.mp3", img: "./images/unsaid.jpg",time:"2:13" }
 ]
 
 
@@ -15,6 +17,7 @@ var poster = document.querySelector("#left")
 var play = document.querySelector("#play");
 var back = document.querySelector("#back");
 var forward = document.querySelector("#forward");
+var mainDiv = document.querySelector("#main");
 var audio = new Audio()
 var selectedSong = 0
 
@@ -26,12 +29,13 @@ function main() {
     arr.forEach((item, id) => {
 
         clutter += `<div class="song-card" id=${id}>
-    <div class="part-1">
+    
         <img src=${item.img} alt="">
+        <div class="part-1">
         <h2>${item.songName}</h2>
-        <!-- <p>Benson Boone</p> -->
+        <p>${item.artist}</p>
     </div>
-    <h6>3:56</h6> 
+    <h6>${item.time}</h6> 
     </div>`
     })
 
